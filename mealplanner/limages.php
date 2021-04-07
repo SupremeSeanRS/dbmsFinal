@@ -113,6 +113,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     header("refresh:3;limages.php");
                 }
             }
+            else {
+                $msg = "Recipe does not exists or failed to upload image";
+                echo '<h2 class="alert alert-danger" role="alert">';
+                echo $msg;
+                echo '</h2>';
+                header("refresh:3;limages.php");
+            }
         }
 
     ?>
